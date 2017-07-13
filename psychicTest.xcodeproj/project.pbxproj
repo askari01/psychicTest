@@ -12,6 +12,7 @@
 		360FDAAC1F15F1AD00E7FF9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360FDAAA1F15F1AD00E7FF9B /* Main.storyboard */; };
 		360FDAAE1F15F1AD00E7FF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360FDAAD1F15F1AD00E7FF9B /* Assets.xcassets */; };
 		360FDAB11F15F1AD00E7FF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360FDAAF1F15F1AD00E7FF9B /* LaunchScreen.storyboard */; };
+		BC04269F1F17521700D3072D /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04269E1F17521700D3072D /* GameVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		360FDAAD1F15F1AD00E7FF9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		360FDAB01F15F1AD00E7FF9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		360FDAB21F15F1AD00E7FF9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC04269E1F17521700D3072D /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameVC.swift; path = ../GameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				360FDAA61F15F1AD00E7FF9B /* AppDelegate.swift */,
+				BC04269E1F17521700D3072D /* GameVC.swift */,
 				360FDAA81F15F1AD00E7FF9B /* ViewController.swift */,
 				360FDAAA1F15F1AD00E7FF9B /* Main.storyboard */,
 				360FDAAD1F15F1AD00E7FF9B /* Assets.xcassets */,
@@ -96,7 +99,6 @@
 				TargetAttributes = {
 					360FDAA21F15F1AD00E7FF9B = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 824M9D9K7F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				360FDAA91F15F1AD00E7FF9B /* ViewController.swift in Sources */,
+				BC04269F1F17521700D3072D /* GameVC.swift in Sources */,
 				360FDAA71F15F1AD00E7FF9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 824M9D9K7F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = psychicTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.askari.psychicTest;
@@ -276,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 824M9D9K7F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = psychicTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.askari.psychicTest;
@@ -304,6 +307,7 @@
 				360FDAB71F15F1AD00E7FF9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
