@@ -17,7 +17,7 @@ class GameVC: UIViewController {
     @IBOutlet weak var rightTap: UIButton!
     @IBOutlet weak var leftTap: UIButton!
     var imageArray = [String]()
-    var imageCount = 0
+    var grayImageCount = 0
     var heroPick = 0
     
     override func viewDidLoad() {
@@ -50,7 +50,7 @@ class GameVC: UIViewController {
         print (heroPick)
     }
     
-    // MARK: - Image Processing
+    
     // MARK: Random Image picker for imageView
     
     func randomImage(value: Int) {
@@ -72,9 +72,23 @@ class GameVC: UIViewController {
                 
                 return
                 
-            }else if (imageArray.count == 36) {
+            }else if (imageArray.count == 35) {
                 print ("36 Images Displayed")
                 backImage.image = UIImage(named: "Relaxation")
+                rightTap.isHidden = true
+                leftTap.isHidden = true
+                print (grayImageCount)
+                let resultInPercent = Int(resultInPercentage(value: grayImageCount))
+                
+                
+                let alert = UIAlertController(title: "Result", message: "Your Score is \(resultInPercent)%", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
+                    self.performSegue(withIdentifier: "goBack", sender: nil)
+                    
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
+                
                 
                 
             }else {
@@ -100,12 +114,21 @@ class GameVC: UIViewController {
             
             tapCutainLable.isHidden = true
             backImage.image = UIImage(named:"GrayRec")
+            grayImageCount += 1
             rightTap.isHidden = true
             leftTap.isHidden = true
             self.perform(#selector(HideImage), with: backImage, afterDelay: 2.0)
         }
     }
     
+    func resultInPercentage(value: Int) -> Double {
+        
+        let x : Double = Double (36 - value)
+        return Double((x / 36 ) * 100)
+        
+    
+    }
+    // MARK: - Image Processing
     func HideImage(){
        // self.rightImage.isHidden = false
        // self.leftImage.isHidden = false
