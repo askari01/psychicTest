@@ -305,15 +305,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 3" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-re-roq" userLabel="Tap Left">
-                                <rect key="frame" x="0.0" y="0.0" width="188" height="624"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-re-roq" userLabel="Tap Left">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="624"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 3" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-UQ-5uL" userLabel="Tap Right">
-                                <rect key="frame" x="186" y="0.0" width="189" height="624"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-UQ-5uL" userLabel="Tap Right">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="624"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 2" translatesAutoresizingMaskIntoConstraints="NO" id="lLh-La-r7k" userLabel="Upper">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ass" translatesAutoresizingMaskIntoConstraints="NO" id="lLh-La-r7k" userLabel="Upper">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="XKD-Nl-zDE"/>
@@ -322,7 +322,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBv-Rg-oNU">
                                 <rect key="frame" x="0.0" y="3" width="188" height="621"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="button1:" destination="TtN-gY-iV1" eventType="touchUpInside" id="KtW-MZ-vh9"/>
                                 </connections>
@@ -330,7 +329,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNs-oG-KZK">
                                 <rect key="frame" x="186" y="0.0" width="189" height="624"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="button0:" destination="TtN-gY-iV1" eventType="touchUpInside" id="bJK-J0-bCe"/>
                                 </connections>
@@ -372,8 +370,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Asset 2" width="382" height="84"/>
-        <image name="Asset 3" width="375" height="684"/>
+        <image name="Ass" width="750" height="180"/>
+        <image name="Back" width="750" height="1334"/>
         <image name="Group 23" width="302" height="49"/>
         <image name="Group 34" width="302" height="49"/>
         <image name="Rectangle 1" width="226" height="42"/>
