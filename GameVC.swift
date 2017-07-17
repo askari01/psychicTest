@@ -55,7 +55,7 @@ class GameVC: UIViewController {
     
     func randomImage(value: Int) {
         if value == 1 {
-            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
                 self.rightImage.alpha = 1
                 self.leftImage.alpha = 1
                 self.rightImage.center.y = -350
@@ -132,7 +132,7 @@ class GameVC: UIViewController {
     func HideImage(){
        // self.rightImage.isHidden = false
        // self.leftImage.isHidden = false
-        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
             self.rightImage.alpha = 1
             self.leftImage.alpha = 1
             self.rightImage.center.y = +310
