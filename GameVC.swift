@@ -18,12 +18,13 @@ class GameVC: UIViewController {
     @IBOutlet weak var leftTap: UIButton!
     var imageArray = [String]()
     var imageCount = 0
-    var heroButton = 0
+    var heroPick = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        getHero()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,63 +33,26 @@ class GameVC: UIViewController {
     }
     
     @IBAction func button0(_ sender: UIButton) {
-       // rightImage.isHidden = true
-       // leftImage.isHidden = true
-        
-        randomImage(value: heroButton)
-        
-//        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
-//            self.rightImage.alpha = 1
-//            self.leftImage.alpha = 1
-//            self.rightImage.center.y = -350
-//            self.leftImage.center.y = -350
-//        }, completion: nil)
-//        tapCutainLable.isHidden = true
-//        
-//        
-//        let randomNum:Int = Int(arc4random_uniform(116))
-//        let imageName = "image_\(randomNum)"
-//        if imageArray.contains(imageName){
-//            
-//            return
-//         
-//        }else if (imageArray.count == 36) {
-//            print ("36 Images Displayed")
-//            backImage.image = UIImage(named: "Relaxation")
-//            
-//        
-//        }else {
-//        
-//            backImage.image = UIImage(named: imageName)
-//            rightTap.isHidden = true
-//            leftTap.isHidden = true
-//            
-//            self.perform(#selector(HideImage), with: backImage, afterDelay: 1.0)
-//        }
-//
-//        imageArray.append(imageName)
-//        
-//        
+        randomImage(value: heroPick)
 
     }
     
  
     
     @IBAction func button1(_ sender: UIButton) {
-//        UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
-//            self.rightImage.alpha = 1
-//            self.leftImage.alpha = 1
-//            self.rightImage.center.y = -350
-//            self.leftImage.center.y = -350
-//        }, completion: nil)
-//
-//        tapCutainLable.isHidden = true
-//        backImage.image = UIImage(named:"GrayRec")
-//        rightTap.isHidden = true
-//        leftTap.isHidden = true
-//        self.perform(#selector(HideImage), with: backImage, afterDelay: 2.0)
+        randomImage(value: heroPick)
     }
 
+    
+    // MARK: - Random Button Setup
+    func getHero() {
+        heroPick = Int(arc4random_uniform(2))
+        print (heroPick)
+    }
+    
+    // MARK: - Image Processing
+    // MARK: Random Image picker for imageView
+    
     func randomImage(value: Int) {
         if value == 1 {
             UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
@@ -96,7 +60,9 @@ class GameVC: UIViewController {
                 self.leftImage.alpha = 1
                 self.rightImage.center.y = -350
                 self.leftImage.center.y = -350
-            }, completion: nil)
+            }, completion: { _ in
+                self.getHero()
+            })
             tapCutainLable.isHidden = true
             
             
@@ -128,7 +94,9 @@ class GameVC: UIViewController {
                 self.leftImage.alpha = 1
                 self.rightImage.center.y = -350
                 self.leftImage.center.y = -350
-            }, completion: nil)
+            }, completion: { _ in
+                self.getHero()
+            })
             
             tapCutainLable.isHidden = true
             backImage.image = UIImage(named:"GrayRec")
