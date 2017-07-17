@@ -18,6 +18,7 @@ class GameVC: UIViewController {
     @IBOutlet weak var leftTap: UIButton!
     var imageArray = [String]()
     var grayImageCount = 0
+    var imageCount = 0
     var heroPick = 0
     
     override func viewDidLoad() {
@@ -54,6 +55,8 @@ class GameVC: UIViewController {
     // MARK: Random Image picker for imageView
     
     func randomImage(value: Int) {
+        imageCount = imageCount + 1
+        print ("imagecount value \(imageCount)")
         if value == 1 {
             UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
                 self.rightImage.alpha = 1
@@ -69,10 +72,11 @@ class GameVC: UIViewController {
             let randomNum:Int = Int(arc4random_uniform(116))
             let imageName = "image_\(randomNum)"
             if imageArray.contains(imageName){
-                
                 return
-                
-            }else if (imageArray.count == 35) {
+            }
+            
+            if (imageCount == 36)
+            {
                 print ("36 Images Displayed")
                 backImage.image = UIImage(named: "Relaxation")
                 rightTap.isHidden = true
@@ -97,7 +101,7 @@ class GameVC: UIViewController {
                 rightTap.isHidden = true
                 leftTap.isHidden = true
                 
-                self.perform(#selector(HideImage), with: backImage, afterDelay: 1.0)
+                self.perform(#selector(HideImage), with: backImage, afterDelay: 2.0)
             }
             
             imageArray.append(imageName)
