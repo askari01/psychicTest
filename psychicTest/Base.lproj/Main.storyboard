@@ -210,6 +210,26 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 8" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-NL-ojS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sP-hc-ODY">
+                                        <rect key="frame" x="120" y="41" width="135" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="0.78811189018322114" blue="0.27402507174291024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Two curtains will appear on the screen  side by side." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-yv-eEr">
+                                        <rect key="frame" x="24" y="107" width="327" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A picture is behind one of the curtains; a blank grey wall behind the other." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMZ-or-bSr">
+                                        <rect key="frame" x="24" y="167" width="327" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When the starry sky appears, clearyour mind for the next  trial." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24O-w6-URk">
                                         <rect key="frame" x="24" y="313" width="327" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -240,43 +260,17 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sP-hc-ODY">
-                                        <rect key="frame" x="87" y="42" width="200" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" red="1" green="0.78811189018322114" blue="0.27402507174291024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fFd-nl-jtX">
-                                        <rect key="frame" x="39" y="104" width="297.5" height="92"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two curtains will appear on the screen  side by side." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-yv-eEr">
-                                                <rect key="frame" x="0.0" y="0.0" width="297.5" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A picture is behind one of the curtains; a blank grey wall behind the other." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMZ-or-bSr">
-                                                <rect key="frame" x="0.0" y="51" width="297.5" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="2vw-NL-ojS" secondAttribute="bottom" id="23n-RJ-moM"/>
+                                    <constraint firstItem="6sP-hc-ODY" firstAttribute="leading" secondItem="2Jo-Wv-PZG" secondAttribute="leading" constant="120" id="2at-fz-Cyo"/>
                                     <constraint firstItem="2vw-NL-ojS" firstAttribute="centerX" secondItem="2Jo-Wv-PZG" secondAttribute="centerX" id="4ez-2r-HaF"/>
-                                    <constraint firstItem="6sP-hc-ODY" firstAttribute="leading" secondItem="2Jo-Wv-PZG" secondAttribute="leading" constant="87" id="9e8-hm-F4c"/>
-                                    <constraint firstItem="fFd-nl-jtX" firstAttribute="leading" secondItem="2Jo-Wv-PZG" secondAttribute="leading" constant="39" id="CSm-4Z-jTS"/>
-                                    <constraint firstItem="fFd-nl-jtX" firstAttribute="top" secondItem="6sP-hc-ODY" secondAttribute="bottom" constant="30.5" id="Ex4-G6-m7G"/>
-                                    <constraint firstItem="6sP-hc-ODY" firstAttribute="top" secondItem="2Jo-Wv-PZG" secondAttribute="top" constant="42" id="GP9-iQ-kq2"/>
-                                    <constraint firstAttribute="trailing" secondItem="fFd-nl-jtX" secondAttribute="trailing" constant="38.5" id="Ypa-kZ-dfP"/>
+                                    <constraint firstItem="6sP-hc-ODY" firstAttribute="top" secondItem="2Jo-Wv-PZG" secondAttribute="top" constant="41" id="9mr-pO-uwG"/>
                                     <constraint firstItem="2vw-NL-ojS" firstAttribute="top" secondItem="2Jo-Wv-PZG" secondAttribute="top" id="aWG-Pa-fb4"/>
+                                    <constraint firstAttribute="trailing" secondItem="6sP-hc-ODY" secondAttribute="trailing" constant="120" id="cmU-NI-mxX"/>
                                     <constraint firstItem="2vw-NL-ojS" firstAttribute="centerY" secondItem="2Jo-Wv-PZG" secondAttribute="centerY" id="j4Q-Gg-obn"/>
                                     <constraint firstAttribute="trailing" secondItem="2vw-NL-ojS" secondAttribute="trailing" id="jJK-cn-y8v"/>
                                     <constraint firstItem="2vw-NL-ojS" firstAttribute="leading" secondItem="2Jo-Wv-PZG" secondAttribute="leading" id="keG-yh-w01"/>
-                                    <constraint firstAttribute="trailing" secondItem="6sP-hc-ODY" secondAttribute="trailing" constant="88" id="zy4-Rz-zwe"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -311,7 +305,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-<<<<<<< HEAD
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-re-roq" userLabel="Tap Left">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="624"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -321,18 +314,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ass" translatesAutoresizingMaskIntoConstraints="NO" id="lLh-La-r7k" userLabel="Upper">
-=======
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-UQ-5uL" userLabel="Front Image">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ass" translatesAutoresizingMaskIntoConstraints="NO" id="lLh-La-r7k" userLabel="Upper">
->>>>>>> master
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="XKD-Nl-zDE"/>
                                 </constraints>
                             </imageView>
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBv-Rg-oNU">
                                 <rect key="frame" x="0.0" y="3" width="188" height="621"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -347,27 +333,8 @@
                                     <action selector="button0:" destination="TtN-gY-iV1" eventType="touchUpInside" id="bJK-J0-bCe"/>
                                 </connections>
                             </button>
-=======
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6sG-x8-W5d">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBv-Rg-oNU">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="627"/>
-                                        <connections>
-                                            <action selector="button1:" destination="TtN-gY-iV1" eventType="touchUpInside" id="KtW-MZ-vh9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNs-oG-KZK">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="627"/>
-                                        <connections>
-                                            <action selector="button0:" destination="TtN-gY-iV1" eventType="touchUpInside" id="bJK-J0-bCe"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
->>>>>>> master
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap either one of Curtains" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-N6-tI1">
-                                <rect key="frame" x="51" y="638.5" width="272" height="21.5"/>
+                                <rect key="frame" x="75" y="637.5" width="224" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -377,29 +344,19 @@
                         <constraints>
                             <constraint firstItem="xV5-Y4-d2Z" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leading" id="26k-vC-qNG"/>
                             <constraint firstItem="lLh-La-r7k" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leading" id="3zS-Eu-4UL"/>
-                            <constraint firstItem="wyE-N6-tI1" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leadingMargin" constant="35" id="5Ga-dP-eIW"/>
-                            <constraint firstAttribute="trailing" secondItem="lLh-La-r7k" secondAttribute="trailing" id="916-1W-BNQ"/>
-                            <constraint firstItem="lLh-La-r7k" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leading" id="9b2-q2-8nL"/>
-                            <constraint firstItem="6sG-x8-W5d" firstAttribute="top" secondItem="tqx-rV-GZw" secondAttribute="top" id="9fX-FL-dBg"/>
-                            <constraint firstAttribute="bottom" secondItem="6sG-x8-W5d" secondAttribute="bottom" constant="40" id="F0a-hs-Thv"/>
-                            <constraint firstItem="6sG-x8-W5d" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leading" id="I5a-1l-hlu"/>
-                            <constraint firstItem="Vev-UQ-5uL" firstAttribute="top" secondItem="tqx-rV-GZw" secondAttribute="top" id="ILc-Pf-bu7"/>
-                            <constraint firstAttribute="trailing" secondItem="6sG-x8-W5d" secondAttribute="trailing" id="Ioj-aR-h6I"/>
-                            <constraint firstItem="Vev-UQ-5uL" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leading" id="QCy-eP-dLA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wyE-N6-tI1" secondAttribute="trailing" constant="60" id="HBQ-Oc-mQy"/>
                             <constraint firstItem="xV5-Y4-d2Z" firstAttribute="top" secondItem="tqx-rV-GZw" secondAttribute="top" id="SMP-AM-7hH"/>
                             <constraint firstAttribute="trailing" secondItem="lLh-La-r7k" secondAttribute="trailing" id="SRx-Kb-Rcp"/>
                             <constraint firstItem="lLh-La-r7k" firstAttribute="top" secondItem="tqx-rV-GZw" secondAttribute="top" id="SYv-gG-N5P"/>
                             <constraint firstAttribute="trailing" secondItem="xV5-Y4-d2Z" secondAttribute="trailing" id="beu-Xj-If2"/>
-                            <constraint firstItem="MaZ-Qy-S16" firstAttribute="top" secondItem="wyE-N6-tI1" secondAttribute="bottom" constant="7" id="cdb-5w-q5z"/>
-                            <constraint firstItem="lLh-La-r7k" firstAttribute="top" secondItem="tqx-rV-GZw" secondAttribute="top" id="ce1-Np-158"/>
-                            <constraint firstAttribute="trailing" secondItem="Vev-UQ-5uL" secondAttribute="trailing" id="h6f-FQ-Qrn"/>
                             <constraint firstItem="MaZ-Qy-S16" firstAttribute="top" secondItem="xV5-Y4-d2Z" secondAttribute="bottom" id="kUf-wc-35r"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wyE-N6-tI1" secondAttribute="trailing" constant="36" id="qjL-kf-4KX"/>
-                            <constraint firstAttribute="bottom" secondItem="Vev-UQ-5uL" secondAttribute="bottom" constant="37" id="y3G-Tb-HDI"/>
+                            <constraint firstItem="MaZ-Qy-S16" firstAttribute="top" secondItem="wyE-N6-tI1" secondAttribute="bottom" constant="8" id="lyc-yW-ljl"/>
+                            <constraint firstItem="wyE-N6-tI1" firstAttribute="leading" secondItem="tqx-rV-GZw" secondAttribute="leadingMargin" constant="59" id="pXO-BE-58j"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backImage" destination="xV5-Y4-d2Z" id="KZj-ZF-AMp"/>
+                        <outlet property="leftImage" destination="eXK-re-roq" id="57X-sr-ARf"/>
                         <outlet property="leftTap" destination="SBv-Rg-oNU" id="bHl-C5-31E"/>
                         <outlet property="rightImage" destination="Vev-UQ-5uL" id="WdA-oJ-lEh"/>
                         <outlet property="rightTap" destination="VNs-oG-KZK" id="fV5-nz-xWj"/>
@@ -413,17 +370,12 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
         <image name="Ass" width="750" height="180"/>
         <image name="Back" width="750" height="1334"/>
-=======
->>>>>>> master
         <image name="Group 23" width="302" height="49"/>
         <image name="Group 34" width="302" height="49"/>
         <image name="Rectangle 1" width="226" height="42"/>
         <image name="Rectangle 3" width="377" height="820"/>
         <image name="Rectangle 8" width="375" height="736"/>
-        <image name="ass" width="750" height="180"/>
-        <image name="back" width="750" height="1334"/>
     </resources>
 </document>
