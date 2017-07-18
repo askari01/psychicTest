@@ -137,11 +137,27 @@ class GameVC: UIViewController {
     func HideImage(){
        // self.rightImage.isHidden = false
        // self.leftImage.isHidden = false
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        var screenHeight = screenSize.height
+        print (screenHeight)
+        if screenHeight == 736 {
+            screenHeight = 340
+        } else if screenHeight == 667 {
+            screenHeight = 315
+        } else {
+            screenHeight = 275
+        }
+        let button = leftTap.frame.width
+        print (button)
+        
+        
         UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
             self.rightImage.alpha = 1
             self.leftImage.alpha = 1
-            self.rightImage.center.y = +310
-            self.leftImage.center.y = +310
+            self.rightImage.center.y = +350
+            self.leftImage.center.y = +screenHeight
         }, completion: nil)
 
         tapCutainLable.isHidden = false
