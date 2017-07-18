@@ -23,6 +23,7 @@ class GameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //leftImage.isHidden = true
         
         // Do any additional setup after loading the view.
         getHero()
