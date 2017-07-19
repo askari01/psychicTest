@@ -34,12 +34,14 @@ class GameVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Right Button
+    
     @IBAction func button0(_ sender: UIButton) {
         randomImage(value: heroPick)
 
     }
     
- 
+    // MARK: - Left Button
     
     @IBAction func button1(_ sender: UIButton) {
         randomImage(value: heroPick)
@@ -72,6 +74,7 @@ class GameVC: UIViewController {
             
             let randomNum:Int = Int(arc4random_uniform(116))
             let imageName = "image_\(randomNum)"
+            
             if imageArray.contains(imageName){
                 return
             }
@@ -126,6 +129,8 @@ class GameVC: UIViewController {
         }
     }
     
+    // MARK: - Calculate Result
+    
     func resultInPercentage(value: Int) -> Double {
         
         let x : Double = Double (36 - value)
@@ -133,7 +138,9 @@ class GameVC: UIViewController {
         
     
     }
+    
     // MARK: - Image Processing
+    
     func HideImage(){
        // self.rightImage.isHidden = false
        // self.leftImage.isHidden = false
