@@ -146,7 +146,7 @@ class GameVC: UIViewController {
        // self.leftImage.isHidden = false
         
         let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width
+//        let screenWidth = screenSize.width
         var screenHeight = screenSize.height
         print (screenHeight)
         if screenHeight == 736 {
