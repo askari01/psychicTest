@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class GameVC: UIViewController {
     
@@ -20,6 +21,8 @@ class GameVC: UIViewController {
     var grayImageCount = 0
     var imageCount = 0
     var heroPick = 0
+    
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,20 +88,22 @@ class GameVC: UIViewController {
                 backImage.image = UIImage(named: "Relaxation")
                 rightTap.isHidden = true
                 leftTap.isHidden = true
-                print (grayImageCount)
+                print ("grey Image Count:\(grayImageCount)")
+                print ("image count: \(imageCount)")
                 let resultInPercent = Int(resultInPercentage(value: grayImageCount))
                 
                 
                 let alert = UIAlertController(title: "Result", message: "Your Score is \(resultInPercent)%", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
                     self.performSegue(withIdentifier: "goBack", sender: nil)
-                    
+                    let sex1 =  (self.defaults.value(forKey: "sex")!)
+                    let firstName1 = (self.defaults.value(forKey: "firstName")!)
+                    let lastName1 = (self.defaults.value(forKey: "lastName")!)
+                    let age1 = (self.defaults.value(forKey: "age")!)
+                    self.pushData(sex: sex1 as! String, firstName: firstName1 as! String, lastName: lastName1 as! String, age: age1 as! String, score: resultInPercent)
                 }))
                 self.present(alert, animated: true, completion: nil)
-                
-                
-                
-                
+  
             }else {
                 
                 backImage.image = UIImage(named: imageName)
@@ -129,14 +134,42 @@ class GameVC: UIViewController {
         }
     }
     
+    // MARK: - Saving Data
+    func pushData(sex: String, firstName: String, lastName: String, age: String, score: Int) {
+        //declare parameter as a dictionary which contains string as key and value combination. considering inputs are valid
+        var score1 = String(describing: score)
+
+        let parameters: Parameters = [
+            "fname": firstName,
+            "lname": lastName,
+            "age": age,
+            "result": score1,
+            "arotic": grayImageCount,
+            "nonarotic": (imageCount - grayImageCount - 1)
+        ]
+        
+        //        print(parameters)
+        
+        Alamofire.request("http://swatshawls.com/psychic/Apis/savedata", method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil ).responseJSON{ response in
+            switch response.result {
+            case .success:
+                print("0: \(response)")
+                if let value = response.result.value {
+                    print (value)
+                }
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     // MARK: - Calculate Result
     
     func resultInPercentage(value: Int) -> Double {
         
         let x : Double = Double (36 - value)
         return Double((x / 36 ) * 100)
-        
-    
     }
     
     // MARK: - Image Processing
@@ -165,22 +198,12 @@ class GameVC: UIViewController {
             self.leftImage.alpha = 1
             self.rightImage.center.y = +350
             self.leftImage.center.y = +screenHeight
-        }, completion: nil)
+        }, completion: {_ in
+            self.tapCutainLable.isHidden = false
+            self.rightTap.isHidden = false
+            self.leftTap.isHidden = false
+        })
 
-        tapCutainLable.isHidden = false
-        rightTap.isHidden = false
-        leftTap.isHidden = false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

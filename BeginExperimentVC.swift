@@ -22,6 +22,7 @@ class BeginExperimentVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var firstNameTF: UITextField!
     var type = ["Male/Female", "Male/Male"]
     
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         
@@ -41,7 +42,7 @@ class BeginExperimentVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         firstNameError.isHidden = true
         secondNameError.isHidden = true
         ageError.isHidden = true
-        
+        defaults.set("male", forKey: "sex")
         
     }
     
@@ -53,11 +54,13 @@ class BeginExperimentVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             
             case maleSwitch:
                 print ("Male selected")
+                defaults.set("male", forKey: "sex")
                 femaleSwitch.isOn = false
                 //femaleSwitch.isEnabled = false
             
             case femaleSwitch:
                 print ("Female selected")
+                defaults.set("female", forKey: "sex")
                 maleSwitch.isOn = false
                 //maleSwitch.isEnabled = false
             
@@ -87,14 +90,14 @@ class BeginExperimentVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             secondNameError.isHidden = false
             ageError.isHidden = false
             
-            
         }else {
+            defaults.set(firstNameTF.text! , forKey: "firstName")
+            defaults.set(secondNameTF.text! , forKey: "lastName")
+            defaults.set(ageTF.text! , forKey: "age")
             
             performSegue(withIdentifier: "beginExperimentSegue", sender: sender)
         }
-        
-        
-        
+ 
     }
     
     // MARK: - DataPicker Configuration
